@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+      <h4>Your Balance</h4>
+      <h1 id="balance">Rs.0.00</h1>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money-plus">+Rs.0.00</p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money-minus">-Rs.0.00</p>
+        </div>
+      </div>
+
+      <div class="history-header">
+        <h3>History</h3>
+        <div class="form-control category-filter">
+          <label for="filter-category">Filter by Category</label>
+          <select id="filter-category">
+            <option value="all">All</option>
+            <option value="food">Food</option>
+            <option value="transportation">Transportation</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="miscellaneous">Miscellaneous</option>
+          </select>
+        </div>
+      </div>
+
+      <ul id="list" class="list">
+        <!-- Transactions will be dynamically added here -->
+      </ul>
+
+      <h3>Add New Transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Description</label>
+          <input type="text" id="text" placeholder="Add Description...." />
+        </div>
+
+        <div class="form-control">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="choose category">Choose category</option>
+            <option value="transportation">Transportation</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="miscellaneous">Miscellaneous</option>
+            <option value="food">Food</option>
+          </select>
+        </div>
+
+        <div class="form-control">
+          <label for="amount"
+            >Amount <br />
+            (negative - expense, positive - income)
+          </label>
+          <input type="number" id="amount" placeholder="Enter amount..." />
+        </div>
+
+        <div class="form-control">
+          <label for="date">Date</label>
+          <input type="date" id="date" placeholder="Enter date..." />
+        </div>
+
+        <button class="btn">Add transaction</button>
+      </form>
+    </div>
+    <!-- JavaScript Project  -->
+    <script src="script.js"></script>
+  </body>
+</html>
